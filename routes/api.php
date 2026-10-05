@@ -3,16 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| STUDENTS
-|--------------------------------------------------------------------------
-*/
 
 $students = [
     [
         'id' => 1,
-        'student_number' => '2026-0001',
+        'student_number' => '2024-0001',
         'name' => 'Juan Dela Cruz',
         'course' => 'Bachelor of Science in Information Technology',
         'year_level' => 2,
@@ -27,171 +22,7 @@ $students = [
         'guardian_phone' => '09187654321',
     ],
 
-    [
-        'id' => 2,
-        'student_number' => '2026-0002',
-        'name' => 'Maria Santos',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2A',
-        'email' => 'maria.santos@example.com',
-        'phone' => '09123456780',
-        'status' => 'Active',
-        'gender' => 'Female',
-        'birth_date' => '2004-08-21',
-        'address' => 'Opol, Misamis Oriental',
-        'guardian' => 'Pedro Santos',
-        'guardian_phone' => '09187654320',
-    ],
-
-    [
-        'id' => 3,
-        'student_number' => '2026-0003',
-        'name' => 'Pedro Reyes',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2A',
-        'email' => 'pedro.reyes@example.com',
-        'phone' => '09123456781',
-        'status' => 'Active',
-        'gender' => 'Male',
-        'birth_date' => '2004-02-11',
-        'address' => 'Cagayan de Oro City',
-        'guardian' => 'Ana Reyes',
-        'guardian_phone' => '09187654319',
-    ],
-
-    [
-        'id' => 4,
-        'student_number' => '2026-0004',
-        'name' => 'Ana Cruz',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2A',
-        'email' => 'ana.cruz@example.com',
-        'phone' => '09123456782',
-        'status' => 'Active',
-        'gender' => 'Female',
-        'birth_date' => '2004-11-03',
-        'address' => 'El Salvador City',
-        'guardian' => 'Jose Cruz',
-        'guardian_phone' => '09187654318',
-    ],
-
-    [
-        'id' => 5,
-        'student_number' => '2026-0005',
-        'name' => 'Jose Garcia',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2A',
-        'email' => 'jose.garcia@example.com',
-        'phone' => '09123456783',
-        'status' => 'Active',
-        'gender' => 'Male',
-        'birth_date' => '2003-12-19',
-        'address' => 'Opol, Misamis Oriental',
-        'guardian' => 'Rosa Garcia',
-        'guardian_phone' => '09187654317',
-    ],
-
-    [
-        'id' => 6,
-        'student_number' => '2026-0006',
-        'name' => 'Rosa Mendoza',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2B',
-        'email' => 'rosa.mendoza@example.com',
-        'phone' => '09123456784',
-        'status' => 'Active',
-        'gender' => 'Female',
-        'birth_date' => '2004-06-27',
-        'address' => 'Cagayan de Oro City',
-        'guardian' => 'Carlos Mendoza',
-        'guardian_phone' => '09187654316',
-    ],
-
-    [
-        'id' => 7,
-        'student_number' => '2026-0007',
-        'name' => 'Carlos Torres',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2B',
-        'email' => 'carlos.torres@example.com',
-        'phone' => '09123456785',
-        'status' => 'Active',
-        'gender' => 'Male',
-        'birth_date' => '2003-09-14',
-        'address' => 'Tagoloan, Misamis Oriental',
-        'guardian' => 'Elena Torres',
-        'guardian_phone' => '09187654315',
-    ],
-
-    [
-        'id' => 8,
-        'student_number' => '2026-0008',
-        'name' => 'Elena Flores',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2B',
-        'email' => 'elena.flores@example.com',
-        'phone' => '09123456786',
-        'status' => 'Active',
-        'gender' => 'Female',
-        'birth_date' => '2004-04-30',
-        'address' => 'Iligan City',
-        'guardian' => 'Mario Flores',
-        'guardian_phone' => '09187654314',
-    ],
-
-    [
-        'id' => 9,
-        'student_number' => '2026-0009',
-        'name' => 'Mark Villanueva',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2B',
-        'email' => 'mark.villanueva@example.com',
-        'phone' => '09123456787',
-        'status' => 'Active',
-        'gender' => 'Male',
-        'birth_date' => '2004-01-25',
-        'address' => 'Opol, Misamis Oriental',
-        'guardian' => 'Linda Villanueva',
-        'guardian_phone' => '09187654313',
-    ],
-
-    [
-        'id' => 10,
-        'student_number' => '2026-0010',
-        'name' => 'Sofia Ramirez',
-        'course' => 'Bachelor of Science in Information Technology',
-        'year_level' => 2,
-        'section' => 'BSIT-2B',
-        'email' => 'sofia.ramirez@example.com',
-        'phone' => '09123456788',
-        'status' => 'Active',
-        'gender' => 'Female',
-        'birth_date' => '2004-10-08',
-        'address' => 'Cagayan de Oro City',
-        'guardian' => 'Antonio Ramirez',
-        'guardian_phone' => '09187654312',
-    ],
 ];
-
-
-/*
-|--------------------------------------------------------------------------
-| SAVED EDITS (so PUT changes survive between requests)
-|--------------------------------------------------------------------------
-| Edits made through PUT /students/{id} are stored in
-| storage/app/student_overrides.json and applied on top of the data above.
-| Delete that file to go back to the original data.
-|--------------------------------------------------------------------------
-*/
-
 $overridesPath = storage_path('app/student_overrides.json');
 
 $overrides = file_exists($overridesPath)
